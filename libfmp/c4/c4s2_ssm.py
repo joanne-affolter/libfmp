@@ -377,7 +377,7 @@ def compute_sm_from_filename(fn_wav, L=21, H=5, L_smooth=16, tempo_rel_set=np.ar
     """
     # Waveform
     Fs = 22050
-    x, Fs = librosa.load(fn_wav, Fs)
+    x, Fs = librosa.load(fn_wav, sr=Fs)
     x_duration = x.shape[0] / Fs
 
     # Chroma Feature Sequence and SSM (10 Hz)
